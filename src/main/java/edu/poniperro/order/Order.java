@@ -1,2 +1,4 @@
-package edu.poniperro.order;public class Order {
+package edu.poniperro.order;
+
+public class Order {
 }

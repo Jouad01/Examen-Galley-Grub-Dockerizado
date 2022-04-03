@@ -1,2 +1,4 @@
-package edu.poniperro.receipt;public class Receipt {
+package edu.poniperro.receipt;
+
+public class Receipt {
 }

@@ -1,2 +1,4 @@
-package edu.poniperro.receipt;public interface Ticket {
+package edu.poniperro.receipt;
+
+public interface Ticket {
 }
