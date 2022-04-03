@@ -12,7 +12,10 @@ LABEL "edu.poniperro.ExamenGalleyGrubDockerizado"="Examen Galley Grub Dockerizad
 LABEL version=1.0-SNAPSHOT
 LABEL mantainer="jouardiouardi@cifpfbmoll.eu"
 
-COPY --from=build /home/app/target/Examen Galley Grub Dockerizado-1.0-SNAPSHOT.jar /usr/local/lib/ExamenGalleyGrubDockerizado.jar/
+
+WORKDIR $HOME/app
+
+COPY --from=build /usr/src/app/target/*.jar ./ExamenGalleyGrubDockerizado.jar
 CMD ["java","-jar","/usr/local/lib/ExamenGalleyGrubDockerizado.jar"]
 
 # Para dockerizar
