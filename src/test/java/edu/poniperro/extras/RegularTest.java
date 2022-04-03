@@ -1,9 +1,12 @@
 package edu.poniperro.extras;
 
+import edu.poniperro.order.Order;
 import org.testng.annotations.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class RegularTest {
-    Receipt receipt;
+ //   Receipt receipt;
     Regular regular;
     Order order;
 
@@ -18,10 +21,10 @@ public class RegularTest {
         order.addItem("Golden Loaf", 2.00, "sauce");
         order.addItem("Seafoam Soda", 1.00, "large");
 
-        receipt = new Receipt(order);
+   //   receipt = new Receipt(order);
 
         regular = new Regular();
-        receipt.setChain(regular);
+     //   receipt.setChain(regular);
 
         regular.sumExtras(order);
         assertEquals(6.75d, order.getTotal(), 0.1d);
@@ -38,13 +41,13 @@ public class RegularTest {
         order.addItem("Golden Loaf", 2.00);
         order.addItem("Seafoam Soda", 1.00);
 
-        receipt = new Receipt(order);
+       // receipt = new Receipt(order);
 
         regular = new Regular();
-        receipt.setChain(regular);
+      //  receipt.setChain(regular);
 
         regular.sumExtras(order);
         assertEquals(6.75d, order.getTotal(), 0.1d);
     }
 }
-}
+

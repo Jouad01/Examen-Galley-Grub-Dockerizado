@@ -1,10 +1,14 @@
 package edu.poniperro.extras;
 
+import edu.poniperro.order.Order;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class SauceExtraTest {
 
-    static Receipt receipt;
+//    static Receipt receipt;
     static Extra sauce;
     static Order order;
 
@@ -19,10 +23,10 @@ public class SauceExtraTest {
         order.addItem("Golden Loaf", 2.00, "sauce");
         order.addItem("Seafoam Soda", 1.00, "large");
 
-        receipt = new Receipt(order);
+      //  receipt = new Receipt(order);
 
         sauce = new SauceExtra();
-        receipt.setChain(sauce);
+      //  receipt.setChain(sauce);
     }
 
     @Test
@@ -32,5 +36,4 @@ public class SauceExtraTest {
         assertEquals(1.00d, order.getTotal(), 0.1d);
     }
 
-}
 }

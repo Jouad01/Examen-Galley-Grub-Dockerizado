@@ -1,7 +1,13 @@
 package edu.poniperro.receipt;
 
+import edu.poniperro.extras.*;
+import edu.poniperro.order.Comanda;
+import edu.poniperro.order.Order;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class ReceiptTest {
     Receipt receipt;
@@ -75,5 +81,4 @@ public class ReceiptTest {
 
         assertEquals(10.0d , receipt.total(), 0.1);
     }
-}
 }
