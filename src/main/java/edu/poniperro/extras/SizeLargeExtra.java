@@ -1,5 +1,6 @@
 package edu.poniperro.extras;
 
+import edu.poniperro.items.Item;
 import edu.poniperro.items.Prices;
 import edu.poniperro.order.Comanda;
 
@@ -23,4 +24,4 @@ public class SizeLargeExtra extends Extra {
         }
     }
 }
-}
+

@@ -4,7 +4,7 @@ import edu.poniperro.order.Comanda;
 
 import java.util.Optional;
 
-public class Extra {
+public abstract class Extra {
     String extraProduct;
     Optional <Extra> nextExtra;
 

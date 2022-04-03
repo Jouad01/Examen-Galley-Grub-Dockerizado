@@ -1,6 +1,8 @@
 package edu.poniperro.extras;
 
+import edu.poniperro.items.Item;
 import edu.poniperro.items.Prices;
+import edu.poniperro.order.Comanda;
 
 public class CheeseExtra extends Extra {
     private final Double CHEESE_PRICE;
@@ -23,4 +25,4 @@ public class CheeseExtra extends Extra {
         }
     }
 }
-}
+
