@@ -8,9 +8,12 @@ RUN mvn -f /home/app/pom.xml clean package -q
 
 FROM openjdk:11.0-jre-slim-buster
 
-LABEL "edu.poniperro.Examen Galley Grub Dockerizado"="Examen Galley Grub Dockerizado"
+LABEL "edu.poniperro.ExamenGalleyGrubDockerizado"="Examen Galley Grub Dockerizado"
 LABEL version=1.0-SNAPSHOT
 LABEL mantainer="jouardiouardi@cifpfbmoll.eu"
 
-COPY --from=build /home/app/target/Examen Galley Grub Dockerizado-1.0-SNAPSHOT.jar /usr/local/lib/Examen Galley Grub Dockerizado.jar
-CMD ["java","-jar","/usr/local/lib/Examen Galley Grub Dockerizado.jar"]
+COPY --from=build /home/app/target/Examen Galley Grub Dockerizado-1.0-SNAPSHOT.jar /usr/local/lib/ExamenGalleyGrubDockerizado.jar/
+CMD ["java","-jar","/usr/local/lib/ExamenGalleyGrubDockerizado.jar"]
+
+# Para dockerizar
+ENTRYPOINT ["java", "-jar", "ExamenGalleyGrubDockerizado.jar"]
